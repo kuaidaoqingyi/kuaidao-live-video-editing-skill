@@ -1,5 +1,7 @@
 # Versioning And Handoff
 
+For the full project folder and output contract, read `project-structure-and-outputs.md`.
+
 ## Folder Contract
 
 ```text
@@ -81,4 +83,3 @@ Reviewer:
 Designer:
 
 - Provides cover references and approves final cover treatment.
-

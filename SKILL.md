@@ -32,6 +32,8 @@ Turn a long Chinese source video into a publishable short video with clean subti
 
 ## Standard Outputs
 
+For the exact project folder contract and delivery package, read `references/project-structure-and-outputs.md`.
+
 ```text
 final-vNN-*.mp4
 cover-vNN-*.jpg|png
@@ -45,19 +47,7 @@ project.yaml
 
 ### 1. Ingest
 
-Create a project folder and fill `templates/project.yaml`.
-
-Minimum folder layout:
-
-```text
-media/raw/
-media/proxy/
-media/assets/
-notes/
-frames/
-versions/
-renders/versions/
-```
+Create a project folder, fill `templates/project.yaml`, and follow `references/project-structure-and-outputs.md`.
 
 Run `ffprobe` to record source dimensions, duration, frame rate, and audio presence.
 
@@ -164,8 +154,8 @@ Reviewer feedback should be timecoded. Use `templates/review.md`.
 
 - `references/subtitle-rules.md`: subtitle cleanup and QA rules.
 - `references/story-editing.md`: story structure and segment decision rules.
+- `references/project-structure-and-outputs.md`: exact folder layout, file naming, and delivery package.
 - `references/cover-and-overlays.md`: cover, PIP, quote card, and HyperFrames guidance.
 - `references/versioning-and-handoff.md`: file layout, versioning, and teammate review.
 - `references/liukaixin-case-study.md`: real example distilled from the Liu Kaixin livestream edit.
 - `templates/`: copyable project, cut plan, review, QA, version log, and asset log templates.
-
