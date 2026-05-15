@@ -2,7 +2,7 @@
 
 把中文直播、访谈、播客、课程、带货讲解等长视频，剪成一条上下文完整、字幕干净、封面和包装可交付的竖版短视频工作流 Skill。
 
-当前版本：`0.2.0`
+当前版本：`0.2.1`
 
 ## 解决什么问题
 
@@ -17,6 +17,26 @@
 - 让同事或 Agent 能按统一工程结构接手继续做
 
 ## 已实现功能
+
+### 0. ASR API key 提醒
+
+做字幕前必须先确认你有可用的 ASR API key。
+
+这个 Skill 不内置任何 ASR 密钥，也不会要求你把密钥写进仓库。你需要自己去申请语音识别服务的 API key，例如 Stepfun/StepAudio、火山/豆包 ASR、OpenAI Whisper 等，然后放在本机环境变量或本地 `.env` 文件里。
+
+如果使用 Stepfun/StepAudio，可以参考官方文档：
+
+```text
+https://platform.stepfun.com/docs/zh/guides/models/stepaudio-2.5-asr
+```
+
+示例环境变量名：
+
+```bash
+export STEP_API_KEY="your-asr-api-key"
+```
+
+不要把 `.env`、API key、access token 提交到 GitHub。
 
 ### 1. 长视频工程初始化
 
@@ -199,7 +219,7 @@ CHANGELOG.md
 1. 修改 `SKILL.md`、`references/`、`templates/` 或 `scripts/`
 2. 更新 `CHANGELOG.md`
 3. 更新 `VERSION`
-4. 提交并打 tag，例如 `v0.2.0`
+4. 提交并打 tag，例如 `v0.2.1`
 5. 推送 main 和 tag 到 GitHub
 
 ## 不要提交什么
@@ -213,4 +233,3 @@ CHANGELOG.md
 - 某个具体项目的完整工程目录
 
 具体项目应该单独放在工作目录里，只把可复用规则回流到本仓库。
-

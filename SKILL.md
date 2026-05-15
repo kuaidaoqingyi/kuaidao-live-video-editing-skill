@@ -55,6 +55,8 @@ Run `ffprobe` to record source dimensions, duration, frame rate, and audio prese
 
 For Chinese video, use the user's configured preferred ASR provider. If the project already specifies Stepfun/StepAudio, use that. If a team has another preferred provider, document it in `project.yaml`.
 
+Before making subtitles, explicitly check that the user has an ASR API key configured. If not, stop and tell them to apply for one from their chosen ASR provider and put it in a local environment variable or `.env` file. Never ask them to paste the key into project files or commit it to GitHub.
+
 Before ASR, create a glossary:
 
 - people, gender pronouns, aliases

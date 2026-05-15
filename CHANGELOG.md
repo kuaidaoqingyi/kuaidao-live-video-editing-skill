@@ -2,6 +2,18 @@
 
 All notable changes to this skill are tracked here.
 
+## [0.2.1] - 2026-05-15
+
+### Added
+
+- Added explicit reminder that users must apply for and configure an ASR API key before generating subtitles.
+- Added `api_key_env` and `api_doc` fields to `templates/project.yaml`.
+- Added Stepfun/StepAudio documentation pointer as an example ASR provider.
+
+### Changed
+
+- Updated `SKILL.md` to stop before transcription if no ASR key is configured.
+
 ## [0.2.0] - 2026-05-15
 
 ### Added
@@ -25,4 +37,3 @@ All notable changes to this skill are tracked here.
 - References for subtitle cleanup, story editing, cover/overlays, versioning, and Liu Kaixin case study.
 - Templates for `project.yaml`, cut plan, review, QA, version log, and asset log.
 - `scripts/subtitle_qa.py` for lightweight Chinese SRT QA.
-
