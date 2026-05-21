@@ -2,6 +2,23 @@
 
 All notable changes to this skill are tracked here.
 
+## [0.3.0] - 2026-05-21
+
+### Added
+
+- Added Kuaidao naming across the skill, README, usage examples, and install path.
+- Added director-style story gates in `references/story-spec-and-gates.md`.
+- Added startup mode checks for new edits, continuing edits, iteration work, and single-surface tasks.
+- Added iteration impact levels for light, medium, and heavy review changes.
+- Expanded `templates/cut-plan.md` with a gate check, executable storyboard timeline, and iteration notes.
+- Expanded `templates/project.yaml` with planning, iteration, and StepFun/StepAudio TTS defaults.
+
+### Changed
+
+- Updated ASR and TTS guidance to prefer StepFun / StepAudio first.
+- Updated the public skill id to `kuaidao-live-video-editing`.
+- Updated current version marker to `0.3.0`.
+
 ## [0.2.1] - 2026-05-15
 
 ### Added
@@ -32,7 +49,7 @@ All notable changes to this skill are tracked here.
 
 ### Added
 
-- Initial `dedao-live-video-editing` Skill.
+- Initial live video editing Skill.
 - Core workflow for Chinese livestream/interview/course short-video editing.
 - References for subtitle cleanup, story editing, cover/overlays, versioning, and Liu Kaixin case study.
 - Templates for `project.yaml`, cut plan, review, QA, version log, and asset log.

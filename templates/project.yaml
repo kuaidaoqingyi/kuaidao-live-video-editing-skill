@@ -6,6 +6,22 @@ project:
   working_dir: ""
   delivery_dir: ""
 
+planning:
+  mode: "new-edit" # new-edit | continue-edit | iteration | single-surface
+  gates_checked: false
+  latest_cut_plan: "cut-plan.md"
+  brief_ready: false
+  candidate_pool_ready: false
+  storyboard_ready: false
+  open_questions: []
+
+iteration:
+  active: false
+  last_review_notes: ""
+  impact_level: "" # light | medium | heavy
+  affected_scenes: []
+  next_version: ""
+
 source:
   original_video: ""
   raw_link: "media/raw.mp4"
@@ -21,8 +37,12 @@ goal:
   target_duration: "5-10 min"
   audience: ""
   story_type: ""
+  core_information: ""
+  cold_viewer_promise: ""
   desired_emotion: ""
   conversion_goal: ""
+  must_keep: []
+  must_remove: []
 
 glossary:
   people:
@@ -40,12 +60,23 @@ glossary:
       correct: ""
 
 asr:
-  provider: ""
-  api_key_env: ""
-  api_doc: ""
+  provider: "StepFun/StepAudio"
+  api_key_lookup:
+    - "macOS Keychain service STEPFUN_API_KEY"
+    - "env STEPFUN_API_KEY"
+    - "env STEP_API_KEY"
+  api_key_env: "STEPFUN_API_KEY or STEP_API_KEY"
+  api_doc: "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-2.5-asr"
   raw_json: "notes/raw-transcript.json"
   raw_srt: "notes/raw-transcript.srt"
   corrected_srt: "subtitles.srt"
+
+tts:
+  provider: "StepFun/StepAudio"
+  model: "stepaudio-2.5-tts"
+  preferred_voice: "ruyananshi"
+  speed: 1.12
+  fallback_requires_user_approval: true
 
 story:
   candidate_windows: "notes/candidate-windows.md"
@@ -59,6 +90,9 @@ visuals:
   cover_style_refs: []
   cover_candidates_dir: "frames/cover-options"
   assets: []
+  subtitle_zone: ""
+  pip_rules: []
+  anti_examples: []
 
 render:
   engine: "HyperFrames"
@@ -72,4 +106,5 @@ qa:
   subtitle_checked: false
   visual_checked: false
   audio_checked: false
+  story_gates_checked: false
   notes: ""
